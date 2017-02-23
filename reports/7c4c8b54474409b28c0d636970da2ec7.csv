@@ -1,0 +1,2 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"To verify the API for Retrieving State List","Verify whether states are retrieved for the Country Code ""IND""","SUCCESS","2017-02-23T22:09:33.291+05:30","0.0","2.81"

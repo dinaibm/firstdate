@@ -1,26 +1,26 @@
-<acceptance-test-run title="Verify whether states are retrieved for the Country Code &quot;IND&quot;" name="Verify whether states are retrieved for the Country Code &quot;IND&quot;" description="" steps="4" successful="4" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="2877" timestamp="2017-02-23T18:01:51.573+05:30" test-source="Cucumber">
+<acceptance-test-run title="Verify whether states are retrieved for the Country Code &quot;IND&quot;" name="Verify whether states are retrieved for the Country Code &quot;IND&quot;" description="" steps="4" successful="4" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="2806" timestamp="2017-02-23T22:09:33.291+05:30" test-source="Cucumber">
   <user-story id="to-verify-the-api-for-retrieving-state-list" name="To verify the API for Retrieving State List" path="APIGet.feature"/>
   <tags>
     <tag name="getapi" type="tag"/>
   </tags>
   <test-group name="Given a request for Country &quot;IND&quot;" result="SUCCESS">
-    <test-step result="SUCCESS" duration="13">
+    <test-step result="SUCCESS" duration="16">
       <description>Loadgetrequestdata: IND</description>
     </test-step>
   </test-group>
   <test-group name="When request is sent to &quot;getStateURI&quot;" result="SUCCESS">
-    <test-step result="SUCCESS" duration="2222">
+    <test-step result="SUCCESS" duration="2169">
       <description>Post GET request: getStateURI</description>
     </test-step>
   </test-group>
   <test-group name="Then status code is &quot;200&quot;" result="SUCCESS">
-    <test-step result="SUCCESS" duration="27">
-      <description>Statuscode: 200, com.jayway.restassured.internal.RestAssuredResponseImpl@134094</description>
+    <test-step result="SUCCESS" duration="0">
+      <description>Statuscode: 200, com.jayway.restassured.internal.RestAssuredResponseImpl@6bf717</description>
     </test-step>
   </test-group>
   <test-group name="And retrieved state count in &quot;RestResponse.messages&quot; is &quot;36&quot;" result="SUCCESS">
-    <test-step result="SUCCESS" duration="282">
-      <description>Resultvalidation: RestResponse.messages, 36, com.jayway.restassured.internal.RestAssuredResponseImpl@134094</description>
+    <test-step result="SUCCESS" duration="312">
+      <description>Resultvalidation: RestResponse.messages, 36, com.jayway.restassured.internal.RestAssuredResponseImpl@6bf717</description>
     </test-step>
   </test-group>
 </acceptance-test-run>
