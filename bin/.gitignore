@@ -1,3 +1,5 @@
 /api/
-/stepdefinitions/
 /features/
+/runner/
+/stepdefinitions/
+/util/

@@ -28,6 +28,7 @@ public String getURI(String uri){
 public static void post(String uri){
 	 Apidefinitions.responsebody = 
 	 given().headers(LoadRequest.jsonAsMap)
+	 .proxy("proxy.cognizant.com", 6050)
 	 .get(uri)
 	 .andReturn();			 
 }
