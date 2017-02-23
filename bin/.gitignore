@@ -1,6 +1,3 @@
-/resources/
+/api/
+/stepdefinitions/
 /features/
-/testdata/
-/request/
-/runner/
-/util/

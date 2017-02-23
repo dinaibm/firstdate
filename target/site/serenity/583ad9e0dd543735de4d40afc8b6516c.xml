@@ -1,0 +1,16 @@
+<acceptance-test-run title="Sampleprogram" name="Sampleprogram" description="" steps="3" successful="3" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="718" timestamp="2017-02-23T00:29:56.120+05:30" test-source="Cucumber">
+  <user-story id="sample" name="Sample" path="Sample.feature"/>
+  <tags>
+    <tag name="Sample" type="feature"/>
+    <tag name="getapi" type="tag"/>
+  </tags>
+  <test-step result="SUCCESS" duration="319">
+    <description>Given a user</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="4">
+    <description>When pass &quot;&lt;username&gt;&quot; and &quot;&lt;password&gt;&quot;</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="0">
+    <description>Then logs in to system</description>
+  </test-step>
+</acceptance-test-run>
