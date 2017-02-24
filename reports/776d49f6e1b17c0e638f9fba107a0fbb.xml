@@ -1,0 +1,15 @@
+<acceptance-test-run title="Test" name="Test" description="" steps="3" successful="3" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="3027" timestamp="2017-02-24T13:11:09.597+05:30" test-source="Cucumber">
+  <user-story id="to-verify-the-api-for-retrieving-state-list" name="To verify the API for Retrieving State List" path="APIGet.feature"/>
+  <tags>
+    <tag name="getapi" type="tag"/>
+  </tags>
+  <test-step result="SUCCESS" duration="210">
+    <description>Given a country code</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="2397">
+    <description>When request is sent</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="315">
+    <description>Then state is retrieved</description>
+  </test-step>
+</acceptance-test-run>

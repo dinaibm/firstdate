@@ -34,7 +34,8 @@ repositories {
 dependencies {
     // The production code uses the SLF4J logging API at compile time
     compile 'org.slf4j:slf4j-api:1.7.21'
-
+// https://mvnrepository.com/artifact/net.serenity-bdd/serenity-rest-assured
+//compile group: 'net.serenity-bdd', name: 'serenity-rest-assured', version: '1.2.2'
     // Declare the dependency for your favourite test framework you want to use in your tests.
     // TestNG is also supported by the Gradle Test task. Just change the
     // testCompile dependency to testCompile 'org.testng:testng:6.8.1' and add
@@ -45,7 +46,7 @@ dependencies {
     testCompile 'net.serenity-bdd:serenity-cucumber:1.1.11'
     testCompile 'net.serenity-bdd:serenity-screenplay:1.1.36'
    testCompile "net.serenity-bdd:serenity-rest-assured:1.1.42"
- //   testCompile "net.serenity-bdd:serenity-rest-assured:1.2.2"
+   // testCompile "net.serenity-bdd:serenity-rest-assured:1.2.2"
 
    // https://mvnrepository.com/artifact/net.serenity-bdd/serenity-rest-assured
 //	compile group: 'net.serenity-bdd', name: 'serenity-rest-assured', version: '1.2.2'

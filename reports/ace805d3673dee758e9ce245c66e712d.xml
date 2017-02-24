@@ -1,0 +1,26 @@
+<acceptance-test-run title="Verify whether states are retrieved for the country code &quot;USA&quot;" name="Verify whether states are retrieved for the country code &quot;USA&quot;" description="" steps="4" successful="4" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="738" timestamp="2017-02-24T12:31:16.850+05:30" test-source="Cucumber">
+  <user-story id="to-verify-the-api-for-retrieving-state-list" name="To verify the API for Retrieving State List" path="APIGet.feature"/>
+  <tags>
+    <tag name="getapi" type="tag"/>
+  </tags>
+  <test-group name="Given a request for Country &quot;USA&quot;" result="SUCCESS">
+    <test-step result="SUCCESS" duration="0">
+      <description>Loadgetrequestdata: USA</description>
+    </test-step>
+  </test-group>
+  <test-group name="When request is sent to &quot;getStateURI&quot;" result="SUCCESS">
+    <test-step result="SUCCESS" duration="697">
+      <description>Post GET request: getStateURI</description>
+    </test-step>
+  </test-group>
+  <test-group name="Then status code is &quot;200&quot;" result="SUCCESS">
+    <test-step result="SUCCESS" duration="0">
+      <description>Statuscode: 200, com.jayway.restassured.internal.RestAssuredResponseImpl@1c420b8</description>
+    </test-step>
+  </test-group>
+  <test-group name="And retrieved state count in &quot;RestResponse.messages&quot; is &quot;56&quot;" result="SUCCESS">
+    <test-step result="SUCCESS" duration="31">
+      <description>Resultvalidation: RestResponse.messages, 56, com.jayway.restassured.internal.RestAssuredResponseImpl@1c420b8</description>
+    </test-step>
+  </test-group>
+</acceptance-test-run>

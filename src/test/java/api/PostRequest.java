@@ -29,31 +29,25 @@ public String getURI(String uri){
 
 public static void post(String uri){
 	
-/*	 Apidefinitions.responsebody = 
+	 Apidefinitions.responsebody = 
 	 given().headers(LoadRequest.jsonAsMap)
-	 // .proxy("proxy.cognizant.com", 6050)
+	  .proxy("proxy.cognizant.com", 6050)
 	 .get(uri)
 	 .andReturn();	
 	 		 
-	*/
+	
+	
+	/*
 	System.out.println(LoadRequest.jsonAsMap.toString());
 	 Apidefinitions.responsebody = 
 	 given()
-	 //.headers(LoadRequest.jsonAsMap)
 	  .contentType("application/json")
 	  .proxy("proxy.cognizant.com", 6050)
 	  .log().body()
 	  .when()
 	 .get(uri)
 	 .then()
-	 .contentType("application/json")
 	 .extract().response().peek();
-	/*
-	 Apidefinitions.res1 =rest().given()
-			 .proxy("proxy.cognizant.com", 6050)
-			 .contentType("application/json")
-			 .get(uri)
-			 .body().peek();
 */
 }
 
