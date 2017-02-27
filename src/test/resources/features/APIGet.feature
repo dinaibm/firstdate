@@ -15,7 +15,7 @@ Feature: To verify the API for Retrieving State List
 #Then status code is "200"
 #And retrieved state count in "RestResponse.messages" is "56"
 
-
+@getapi
 Scenario Outline: Verify whetehr states are retrieved for the country code "IND" and "USA"
 
 Given a request for Country "<CountryCode>"
@@ -28,7 +28,7 @@ Examples:
 |USA		|56		   |
 |IND		|36        |
 
-@getapi
+
 Scenario: Test
 
 Given a country code

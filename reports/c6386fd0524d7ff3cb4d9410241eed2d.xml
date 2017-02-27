@@ -1,4 +1,4 @@
-<acceptance-test-run title="Verify whetehr states are retrieved for the country code &quot;IND&quot; and &quot;USA&quot;" name="Verify whetehr states are retrieved for the country code &quot;IND&quot; and &quot;USA&quot;" description="" steps="8" successful="8" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="4034" timestamp="2017-02-24T12:36:01.951+05:30" test-source="Cucumber">
+<acceptance-test-run title="Verify whetehr states are retrieved for the country code &quot;IND&quot; and &quot;USA&quot;" name="Verify whetehr states are retrieved for the country code &quot;IND&quot; and &quot;USA&quot;" description="" steps="8" successful="8" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="3518" timestamp="2017-02-27T19:52:48.841+05:30" test-source="Cucumber">
   <user-story id="to-verify-the-api-for-retrieving-state-list" name="To verify the API for Retrieving State List" path="APIGet.feature"/>
   <tags>
     <tag name="getapi" type="tag"/>
@@ -24,45 +24,49 @@
   </examples>
   <test-group name="[1] {CountryCode=USA, stateCount=56}" result="SUCCESS">
     <test-group name="Given a request for Country &quot;USA&quot;" result="SUCCESS">
-      <test-step result="SUCCESS" duration="15">
+      <test-step result="SUCCESS" duration="16">
         <description>Loadgetrequestdata: USA</description>
       </test-step>
     </test-group>
     <test-group name="When request is sent to &quot;getStateURI&quot;" result="SUCCESS">
-      <test-step result="SUCCESS" duration="2509">
-        <description>Post GET request: getStateURI</description>
-      </test-step>
+      <test-group name="Post GET request: getStateURI" result="SUCCESS">
+        <test-step result="SUCCESS" duration="0">
+          <description>Get URI: getStateURI</description>
+        </test-step>
+      </test-group>
     </test-group>
     <test-group name="Then status code is &quot;200&quot;" result="SUCCESS">
-      <test-step result="SUCCESS" duration="30">
-        <description>Statuscode: 200, com.jayway.restassured.internal.RestAssuredResponseImpl@a4d8cc</description>
+      <test-step result="SUCCESS" duration="15">
+        <description>Statuscode: 200, com.jayway.restassured.internal.RestAssuredResponseImpl@750b7a</description>
       </test-step>
     </test-group>
     <test-group name="And retrieved state count in &quot;RestResponse.messages&quot; is &quot;56&quot;" result="SUCCESS">
-      <test-step result="SUCCESS" duration="373">
-        <description>Resultvalidation: RestResponse.messages, 56, com.jayway.restassured.internal.RestAssuredResponseImpl@a4d8cc</description>
+      <test-step result="SUCCESS" duration="313">
+        <description>Resultvalidation: RestResponse.messages, 56, com.jayway.restassured.internal.RestAssuredResponseImpl@750b7a</description>
       </test-step>
     </test-group>
   </test-group>
   <test-group name="[1] {CountryCode=IND, stateCount=36}" result="SUCCESS">
     <test-group name="Given a request for Country &quot;IND&quot;" result="SUCCESS">
-      <test-step result="SUCCESS" duration="5">
+      <test-step result="SUCCESS" duration="0">
         <description>Loadgetrequestdata: IND</description>
       </test-step>
     </test-group>
     <test-group name="When request is sent to &quot;getStateURI&quot;" result="SUCCESS">
-      <test-step result="SUCCESS" duration="655">
-        <description>Post GET request: getStateURI</description>
-      </test-step>
+      <test-group name="Post GET request: getStateURI" result="SUCCESS">
+        <test-step result="SUCCESS" duration="0">
+          <description>Get URI: getStateURI</description>
+        </test-step>
+      </test-group>
     </test-group>
     <test-group name="Then status code is &quot;200&quot;" result="SUCCESS">
-      <test-step result="SUCCESS" duration="5">
-        <description>Statuscode: 200, com.jayway.restassured.internal.RestAssuredResponseImpl@19a77c8</description>
+      <test-step result="SUCCESS" duration="0">
+        <description>Statuscode: 200, com.jayway.restassured.internal.RestAssuredResponseImpl@86989</description>
       </test-step>
     </test-group>
     <test-group name="And retrieved state count in &quot;RestResponse.messages&quot; is &quot;36&quot;" result="SUCCESS">
-      <test-step result="SUCCESS" duration="15">
-        <description>Resultvalidation: RestResponse.messages, 36, com.jayway.restassured.internal.RestAssuredResponseImpl@19a77c8</description>
+      <test-step result="SUCCESS" duration="31">
+        <description>Resultvalidation: RestResponse.messages, 36, com.jayway.restassured.internal.RestAssuredResponseImpl@86989</description>
       </test-step>
     </test-group>
   </test-group>

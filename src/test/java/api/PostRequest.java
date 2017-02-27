@@ -1,22 +1,22 @@
 package api;
 
-import com.jayway.restassured.response.ResponseBody;
 
-import cucumber.api.java.en.Given;
+
+import static net.serenitybdd.rest.SerenityRest.given;
+import static net.serenitybdd.rest.SerenityRest.when;
 import net.thucydides.core.annotations.Step;
 import stepdefinitions.Apidefinitions;
 import stepdefinitions.ServiceURI;
-import net.serenitybdd.*;
-import net.serenitybdd.rest.SerenityRest;
-public class PostRequest extends SerenityRest{
 
+public class PostRequest {
+	static String uri = null;
 @Step
-public void postGETRequest(String uri){
-	String uriVal = getURI(uri);
-	System.out.println(uriVal);
-	post(uriVal);
+public void postGETRequest(String uri1){
+	uri = getURI(uri1);
+	System.out.println(uri);
+	//post(uriVal);
 }
-
+@Step
 public String getURI(String uri){
 	String getreqUri = null;
 	if(uri.equals("getStateURI")){
@@ -26,15 +26,34 @@ public String getURI(String uri){
 	return getreqUri;
 		
 }
-
-public static void post(String uri){
+@Step
+public static void post(){
 	
-	 Apidefinitions.responsebody = 
-	 given().headers(LoadRequest.jsonAsMap)
+	Apidefinitions.responsebody = 
+	given()
+	.contentType("application/json")
+	.accept("application/json")
+	.proxy("proxy.cognizant.com", 6050)
+	.when()
+	.baseUri(uri)
+	.get()
+	.then()
+	 .extract()
+	 .response();
+	
+			 
+			 
+			/* 
+			 * given()
+	 .contentType("application/json")
+	 .headers(LoadRequest.jsonAsMap)
 	  .proxy("proxy.cognizant.com", 6050)
+	  .when()
 	 .get(uri)
-	 .andReturn();	
-	 		 
+	 .then()
+	 .extract()
+	 .response();
+	 		*/ 
 	
 	
 	/*
