@@ -37,11 +37,11 @@ public static Response responsebody;
 
 	@When("^request is sent to \"([^\"]*)\"$")
 	public void request_is_sent_to(String arg1) throws Throwable {
-	//	postrequest.postGETRequest(arg1);
-	//	postrequest.giv();
-	//	postrequest.postreq();
+		postrequest.postGETRequest(arg1);
+		postrequest.giv();
+		postrequest.postreq();
 	//	postrequest.resp();
-		reqapi.r();
+	//	reqapi.r();
 	//	reqapi.p();
 	   
 	}

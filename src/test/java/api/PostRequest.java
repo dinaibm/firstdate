@@ -46,7 +46,7 @@ public String getURI(String uri){
 @Step
 public void giv(){
 	rest().given()
-	.proxy("proxy.cognizant.com", 6050)
+	//.proxy("proxy.cognizant.com", 6050)
 	.contentType("application/json")
 	.when()
 	.get("http://services.groupkt.com/state/get/{countryCode}/all", "IND")

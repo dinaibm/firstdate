@@ -1,6 +1,6 @@
 repositories {
     maven {
-        url "http://repo1.maven.org/maven2"
+        url "https://repo1.maven.org/maven2"
     }
    
 }
@@ -51,6 +51,7 @@ dependencies {
     compile 'org.slf4j:slf4j-simple:1.7.21'
     compile 'org.json:json:20160212'
     compile 'com.fasterxml.jackson.core:jackson-core:2.2.2'
+     compile 'org.ini4j:ini4j:0.5.2'
        compile 'com.fasterxml.jackson.core:jackson-databind:2.2.2'
        compile 'com.fasterxml.jackson.core:jackson-annotations:2.2.2'
        testCompile 'junit:junit:4.12'

@@ -28,7 +28,7 @@ public void r(){
     jsonAsMap.put("photoUrls", new ArrayList<>(Arrays.asList()));
 SerenityRest.given()
     .contentType("application/json")
-    		.proxy("proxy.cognizant.com", 6050)
+    	//	.proxy("proxy.cognizant.com", 6050)
             .content(jsonAsMap)
         //    .baseUri("http://petstore.swagger.io/")
          //   .basePath("v2/pet")
