@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 
 import common.WrappedWebDriver;
 import net.serenitybdd.core.annotations.findby.FindBy;
+import net.serenitybdd.core.pages.PageObject;
+import net.serenitybdd.core.pages.PageObjects;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Step;
@@ -16,21 +18,23 @@ import net.thucydides.core.steps.ScenarioSteps;
 import stepdefinitions.UIDefinitions;
 import ui.pageobjects.registration.RegObjects;
 
-public class Registeration extends ScenarioSteps{
-
+//public class Registeration extends ScenarioSteps{
+	public class Registeration extends PageObject{
+	
+	//public Registeration(Pages pages){
+//		super(pages);
+//	}
+	
 
 	private static final long serialVersionUID = 1L;
-	public Registeration(Pages pages){
-		
-		super(pages);
-		
-	}	
-	WebDriver driver = this.getDriver();
+	
+	 WebDriver driver =null;
 	RegObjects regobjects;
 @Step
 public void loadbrowser(){
 	System.out.println("Loading Browser");
 	System.out.println("Launched CHrome Browser");
+	driver = this.getDriver();
 	
 }
 	

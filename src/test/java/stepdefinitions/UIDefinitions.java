@@ -17,8 +17,8 @@ public class UIDefinitions {
 @Steps
 Registeration registeration;
 
-@Steps
-RegObjects regobjects;
+//@Steps
+//RegObjects regobjects;
 
 public static WebDriver driver = null;
 
