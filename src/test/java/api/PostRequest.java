@@ -2,10 +2,8 @@ package api;
 
 
 import net.thucydides.core.annotations.Step;
-import stepdefinitions.ServiceURI;
+import stepdefinitions.Apidefinitions;
 import static net.serenitybdd.rest.SerenityRest.given;
-import static net.serenitybdd.rest.SerenityRest.then;
-import static net.serenitybdd.rest.SerenityRest.when;
 import static net.serenitybdd.rest.SerenityRest.*;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,25 +16,19 @@ import java.util.Random;
 import static net.serenitybdd.rest.SerenityRest.rest;
 
 
-
-
-
 public class PostRequest {
-	//public static ResponseSpecification response=null;
-//	public static RequestSpecification po = null;
 	String uriVal = null;
-	@Step
+
+@Step
 public void postGETRequest(String uri){
 	uriVal = getURI(uri);
-	System.out.println(uriVal);
-	//post(uriVal);
-	//resp();
+	sendGetRequest(uriVal);
 }
 
 public String getURI(String uri){
 	String getreqUri = null;
 	if(uri.equals("getStateURI")){
-	getreqUri=ServiceURI.getStateURI.toString().replace("{countryCode}", LoadRequest.countryCode);
+	getreqUri=ServiceEndpoint.getStateURI.toString().replace("{countryCode}", LoadRequest.countryCode);
 	
 	}
 	return getreqUri;
@@ -44,22 +36,16 @@ public String getURI(String uri){
 }
 
 @Step
-public void giv(){
-	rest().given()
-	//.proxy("proxy.cognizant.com", 6050)
-	.contentType("application/json")
-	.when()
-	.get("http://services.groupkt.com/state/get/{countryCode}/all", "IND")
-	.then()
-	.log().all()
-	;
-	//SerenityRest.setDefaultSessionId(bb.extract().sessionId());
+public void sendGetRequest(String URI){
+	
+	Apidefinitions.responsebody = rest().given()
+									.when()
+									.get(URI);
 }
-@Step
-public void postreq(){
-	//then().statusCode(200);
-}
-@Step
+
+
+
+//Sample for POST Request
 public void resp(){
 //rest().then().statusCode(200);
 	int id = Math.abs(new Random().nextInt());

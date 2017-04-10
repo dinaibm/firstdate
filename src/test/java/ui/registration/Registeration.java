@@ -3,30 +3,16 @@ package ui.registration;
 import java.util.Random;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-
-import common.WrappedWebDriver;
-import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
-import net.serenitybdd.core.pages.PageObjects;
-import net.serenitybdd.core.pages.WebElementFacade;
-import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Step;
-import net.thucydides.core.annotations.Steps;
-import net.thucydides.core.pages.Pages;
-import net.thucydides.core.steps.ScenarioSteps;
-import stepdefinitions.UIDefinitions;
 import ui.pageobjects.registration.RegObjects;
 
-//public class Registeration extends ScenarioSteps{
 	public class Registeration extends PageObject{
 	
-	//public Registeration(Pages pages){
-//		super(pages);
-//	}
+
 	
 
-	private static final long serialVersionUID = 1L;
+	//private static final long serialVersionUID = 1L;
 	
 	 WebDriver driver =null;
 	RegObjects regobjects;
