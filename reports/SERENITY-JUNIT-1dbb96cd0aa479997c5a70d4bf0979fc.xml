@@ -1,5 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Transaction Details Feature of EMS Merchant Portal" skipped="0" tests="1" time="25.54" timestamp="2017-04-110 08:37:19"><testcase name="To Validate User Was able to Navigate to Transaction Details Module Page"><error type="java.lang.NullPointerException"/><system-err>null&#13;
-ems.Transaction.validateTransactionPage(Transaction.java:27)&#13;
-stepdefinitions.EMS.verify_page_is_displayed(EMS.java:68)&#13;
-✽.And verify "Transaction" page is displayed(Transaction.feature:11)&#13;
-</system-err></testcase></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Transaction Details Feature of EMS Merchant Portal" skipped="0" tests="1" time="28.45" timestamp="2017-04-110 11:53:47"><testcase name="To Validate User Was able to Navigate to Transaction Details Module Page"/></testsuite>

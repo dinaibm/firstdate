@@ -68,4 +68,20 @@ Transaction transaction;
 		transaction.validateTransactionPage(appModule);
 	   
 	}
+	
+	@Given("^the date range \"([^\"]*)\" to \"([^\"]*)\" on Transactions Page$")
+	public void the_date_range_to_on_Transactions_Page(String startDate, String endDate) throws Throwable {
+	  transaction.SelectDateRange(startDate, endDate);
+	}
+
+	@When("^user click on \"([^\"]*)\"$")
+	public void user_click_on(String arg1) throws Throwable {
+		transaction.ApplyDateRange();
+	}
+
+	@Then("^validate Transactions are displayed$")
+	public void validate_Transactions_are_displayed() throws Throwable {
+		transaction.TransactionList();
+	}
+
 }

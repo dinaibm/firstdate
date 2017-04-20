@@ -16,7 +16,7 @@ public class Test {
 		Calendar calendar = Calendar.getInstance();
 		Date date = calendar.getTime();
 		System.out.println(new SimpleDateFormat("EEEE", Locale.ENGLISH).format(date.getTime()));    
-		System.out.println(new SimpleDateFormat("MMMM").format(date.getTime()));		
+		System.out.println(new SimpleDateFormat("MM").format(date.getTime()));		
 		System.out.println("Current Year is : " + calendar.get(Calendar.YEAR));
 	    System.out.println("Current Date is : " + calendar.get(Calendar.DATE));
 	}

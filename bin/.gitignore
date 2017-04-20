@@ -1,6 +1,5 @@
-/ui/
-/common/
-/stepdefinitions/
+/ems/
 /features/
 /runner/
-/ems/
+/stepdefinitions/
+/util/
