@@ -4,15 +4,21 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import ems.Login;
+import ems.Transaction;
 import net.thucydides.core.annotations.Steps;
+import util.Config;
 
 public class EMS {
 
 @Steps
 Login login;
 
+@Steps
+Transaction transaction;
+
 	@Given("^the \"([^\"]*)\" Application$")
-	public void the_Application(String URL) throws Throwable {
+	public void the_Application(String AppName) throws Throwable {
+		String URL = Config.get("AppURL","EMSMerchant");;
 	    login.Navigate(URL);
 	}
 
@@ -33,6 +39,33 @@ Login login;
 
 	@Then("^verify \"([^\"]*)\" Dashboard is available$")
 	public void verify_Dashboard_is_available(String DashBoard) throws Throwable {
-	  
+	  login.DashBoard(DashBoard);
+	}
+	
+	@Then("^Verify Dashboard Date displayed is \"([^\"]*)\"$")
+	public void verify_Dashboard_Date_displayed_is(String date) throws Throwable {
+		login.TodaysDate(date);
+	}
+	
+	@Then("^Login Should Fail$")
+	public void login_Should_Fail() throws Throwable {
+	   login.LoginFail();
+	}
+
+	@Then("^should display Message \"([^\"]*)\"$")
+	public void should_display_Message(String LoginFailMessage) throws Throwable {
+	   login.inValidLogin(LoginFailMessage);
+	}
+	
+	@Then("^user Navigate to \"([^\"]*)\" module page$")
+	public void user_Navigate_to_module_page(String appModule) throws Throwable {
+		transaction.NavigateToTransaction(appModule);
+	    
+	}
+	
+	@Then("^verify \"([^\"]*)\" page is displayed$")
+	public void verify_page_is_displayed(String appModule) throws Throwable {
+		transaction.validateTransactionPage(appModule);
+	   
 	}
 }

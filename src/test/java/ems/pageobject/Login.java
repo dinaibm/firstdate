@@ -11,13 +11,14 @@ public class Login extends PageObject{
 	@FindBy(id="username")
 	WebElementFacade UserName;
 	
-	@FindBy(id="passWord")
+	@FindBy(id="password")
 	WebElementFacade Password;
 
 	@FindBy(id="submit")
 	WebElementFacade btnLogin;
 	
-
+	@FindBy(xpath="/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[2]/div/section/div/form/div[1]/div/p[1]")
+	WebElementFacade LoginFailMessage;
 	
 	public WebElement UserName(){
 	    return UserName;
@@ -30,6 +31,8 @@ public class Login extends PageObject{
 	public WebElement btnLogin(){
 	    return btnLogin;
 	  }
+	public WebElement LoginFailMessage(){
+	    return LoginFailMessage;
+	  }
 	
-
 }

@@ -9,7 +9,8 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 features="src/test/resources/features",
 glue="stepdefinitions",
 strict=true,
-tags="@Login")
+tags="@Login",
+dryRun=false)
 public class EMSUIRunner {
 
 }

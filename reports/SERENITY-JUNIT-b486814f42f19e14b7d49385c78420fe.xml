@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Login Feature of EMS Merchant Portal" skipped="1" tests="1" time="9.02" timestamp="2017-04-109 01:38:37"><testcase name="To Validate whether the User able to Login Successfully"><skipped/></testcase></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Login Feature of EMS Merchant Portal" skipped="0" tests="1" time="37.71" timestamp="2017-04-110 03:48:20"><testcase name="To Validate whether the User able to Login Successfully"/></testsuite>

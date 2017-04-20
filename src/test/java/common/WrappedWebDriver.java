@@ -36,7 +36,7 @@ public class WrappedWebDriver implements DriverSource {
 	            capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 	            System.setProperty("webdriver.ie.driver", new File(".").getCanonicalPath()+"\\libs\\IEDriverServer.exe");
 	            driver = new InternetExplorerDriver(capabilities);
-	            driver.manage().timeouts().pageLoadTimeout(Integer.parseInt(iePageLoadTimeout), TimeUnit.SECONDS);
+	            driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 	                System.out.println("IE DRIVER");
 	            }
 	            else if (driverName.equalsIgnoreCase("chromeDriver") && (f.exists())){
