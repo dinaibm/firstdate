@@ -1,2 +1,3 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"User Registration","Valid Registration on successful submit of User Details","SUCCESS","2017-04-09T23:14:18.270+05:30","0.0","15.31"
+"Login Feature of EMS Merchant Portal","To Validate User Not able to Login Successfully with Invalid Credentials","SUCCESS","2017-04-27T03:59:43.311+05:30","0.0","14.73"
+"Login Feature of EMS Merchant Portal","To Validate whether the User able to Login Successfully","SUCCESS","2017-04-27T03:58:50.676+05:30","0.0","45.05"

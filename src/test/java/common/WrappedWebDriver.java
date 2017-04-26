@@ -23,7 +23,7 @@ public class WrappedWebDriver implements DriverSource {
 		// TODO Auto-generated method stub     
 	        WebDriver driver = null;
 	       // String timeoutMilli = ConfigDetails.prop.getProperty("webdriver.implicitWaitTimeoutMilli", "0");
-	String iePageLoadTimeout = ""; //Config.get("setup","webdriver.ie.pageLoadTimeout", "60");
+	//String iePageLoadTimeout = ""; //Config.get("setup","webdriver.ie.pageLoadTimeout", "60");
 	        try {
 	         
 	            driverName=Config.get("setup","driver");

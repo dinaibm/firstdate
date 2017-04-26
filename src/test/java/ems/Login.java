@@ -9,11 +9,11 @@ import java.util.Locale;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
+import net.serenitybdd.core.Serenity;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.Step;
+import util.ExcelUtil;
 
 public class Login extends PageObject{
 
@@ -23,9 +23,10 @@ ems.pageobject.Login login;
 ems.pageobject.DashBoard dashboard;
 
 @Step
-public void Navigate(String URL){
+public void Navigate(String URL, String env){
 	driver = getDriver();
 	driver.get(URL);
+	Serenity.setSessionVariable("Env").to(env);
 }
 
 @Step
@@ -35,6 +36,15 @@ public void EnterUserDetails(String fieldName, String fieldValue){
 	}else if(fieldName.equals("Password")){
 		login.Password().sendKeys(fieldValue);
 	}
+}
+
+@Step
+public void EnterLoginDetails(String UserName, String Password, String DataFile){
+	//Serenity.setSessionVariable("Env").to("Testing");
+	String WorkBook = DataFile.split(":")[0].trim();
+	String WorkSheet = DataFile.split(":")[1].trim();
+	login.UserName().sendKeys(ExcelUtil.getParameterValue(WorkBook, WorkSheet, UserName, Serenity.sessionVariableCalled("Env").toString()));
+	login.Password().sendKeys(ExcelUtil.getParameterValue(WorkBook, WorkSheet, Password, Serenity.sessionVariableCalled("Env").toString()));
 }
 
 @Step

@@ -10,7 +10,7 @@ Then default Dashboard Page is Displayed
 And user Navigate to "Transactions" module page
 And verify "Transactions" page is displayed
 
-@Login
+
 Scenario: To Validate Transactions ere getting displayed based on selected Date Range
 
 Given the "EMSMerchant" Application

@@ -18,13 +18,25 @@ Transaction transaction;
 
 	@Given("^the \"([^\"]*)\" Application$")
 	public void the_Application(String AppName) throws Throwable {
-		String URL = Config.get("AppURL","EMSMerchant");;
-	    login.Navigate(URL);
+	//	String URL = Config.get("AppURL","EMSMerchant");;
+	//    login.Navigate(URL);
 	}
 
 	@Given("^enter \"([^\"]*)\" as \"([^\"]*)\"$")
 	public void enter_as(String fieldName, String fieldValue) throws Throwable {
 	   login.EnterUserDetails(fieldName, fieldValue);
+	}
+	
+	@Given("^the \"([^\"]*)\" Application Launch in \"([^\"]*)\" Env$")
+	public void the_Application_Launch_in_Env(String Application, String Env) throws Throwable {
+		String URL = Config.get("Env",Env);
+	    login.Navigate(URL,Env);	   
+	}
+
+	@Given("^enter \"([^\"]*)\" and \"([^\"]*)\" from \"([^\"]*)\"$")
+	public void enter_and_from(String UserName, String Password, String DataFile) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	   login.EnterLoginDetails(UserName, Password, DataFile);
 	}
 
 	@When("^user click on \"([^\"]*)\" button$")
