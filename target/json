@@ -1,0 +1,124 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 16,
+        "name": "To Validate User Not able to Login Successfully with Invalid Credentials",
+        "description": "",
+        "id": "login-feature-of-ems-merchant-portal;to-validate-user-not-able-to-login-successfully-with-invalid-credentials",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6990714892,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the \"EMSMerchant\" Application Launch in \"nTesting\" Env",
+            "match": {
+              "arguments": [
+                {
+                  "val": "EMSMerchant",
+                  "offset": 5
+                },
+                {
+                  "val": "nTesting",
+                  "offset": 41
+                }
+              ],
+              "location": "EMS.the_Application_Launch_in_Env(String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1782917623,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "enter \"UserName\" and \"Password\" from \"TestData:Login\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "UserName",
+                  "offset": 7
+                },
+                {
+                  "val": "Password",
+                  "offset": 22
+                },
+                {
+                  "val": "TestData:Login",
+                  "offset": 38
+                }
+              ],
+              "location": "EMS.enter_and_from(String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3525508615,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user click on \"Log in to My EMS\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Log in to My EMS",
+                  "offset": 15
+                }
+              ],
+              "location": "EMS.user_click_on_button(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3447064108,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "Login Should Fail",
+            "match": {
+              "location": "EMS.login_Should_Fail()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3479893284,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "should display Message \"This combination of username and password is invalid. Please try again or request a new password.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "This combination of username and password is invalid. Please try again or request a new password.",
+                  "offset": 24
+                }
+              ],
+              "location": "EMS.should_display_Message(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 15,
+            "name": "@Login"
+          }
+        ]
+      }
+    ],
+    "name": "Login Feature of EMS Merchant Portal",
+    "description": "",
+    "id": "login-feature-of-ems-merchant-portal",
+    "keyword": "Feature",
+    "uri": "Login.feature"
+  }
+]

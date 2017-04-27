@@ -11,7 +11,7 @@ glue="stepdefinitions",
 strict=true,
 tags="@Login",
 dryRun=false,
-plugin={"pretty","html:target"})
+plugin={"pretty","html:target","json:target/json"})
 public class EMSUIRunner {
 
 }
