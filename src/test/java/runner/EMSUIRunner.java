@@ -10,7 +10,8 @@ features="src/test/resources/features",
 glue="stepdefinitions",
 strict=true,
 tags="@Login",
-dryRun=false)
+dryRun=false,
+plugin={"pretty","html:target"})
 public class EMSUIRunner {
 
 }

@@ -48,12 +48,14 @@ public void EnterLoginDetails(String UserName, String Password, String DataFile)
 }
 
 @Step
-public void clickLogin(){
+public void clickLogin() throws InterruptedException{
 	login.btnLogin().click();
+	Thread.sleep(3000);
 }
 
 @Step
-public void LandingHomePage(){
+public void LandingHomePage() throws InterruptedException{
+	Thread.sleep(3000);
 	String ExpectedURL="http://dev-business-track-mp-services.us-west-2.elasticbeanstalk.com//emsMerchantUI/#/dashboard/day";
 	String ActualURL = driver.getCurrentUrl();
 	org.junit.Assert.assertEquals(ExpectedURL, ActualURL);
@@ -110,13 +112,15 @@ public void DashBoardDate(String ExpectedDate, String ActualDate){
 }
 
 @Step
-public void LoginFail(){
+public void LoginFail() throws InterruptedException{
+	Thread.sleep(3000);
 	String ExpectedURL="http://dev-business-track-mp-services.us-west-2.elasticbeanstalk.com//emsMerchantUI/#/";
 	String ActualURL = driver.getCurrentUrl();
 	org.junit.Assert.assertEquals(ExpectedURL, ActualURL);
 }
 
-public void inValidLogin(String LoginFailMessage){
+public void inValidLogin(String LoginFailMessage) throws InterruptedException{
+	Thread.sleep(3000);
 	String ActualMessage = login.LoginFailMessage().getText();
 	LoginFailValidation(LoginFailMessage,ActualMessage);
 }
