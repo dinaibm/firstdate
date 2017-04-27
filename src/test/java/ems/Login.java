@@ -55,7 +55,7 @@ public void clickLogin() throws InterruptedException{
 
 @Step
 public void LandingHomePage() throws InterruptedException{
-	Thread.sleep(3000);
+	Thread.sleep(5000);
 	String ExpectedURL="http://dev-business-track-mp-services.us-west-2.elasticbeanstalk.com//emsMerchantUI/#/dashboard/day";
 	String ActualURL = driver.getCurrentUrl();
 	org.junit.Assert.assertEquals(ExpectedURL, ActualURL);
