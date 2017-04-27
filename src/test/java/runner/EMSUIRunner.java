@@ -11,7 +11,7 @@ glue="stepdefinitions",
 strict=true,
 tags="@Login",
 dryRun=false,
-plugin={"pretty","html:target","json:target/json"})
+plugin={"pretty","html:target/cucumber-html-report","json:target/cucumber-report.json"})
 public class EMSUIRunner {
 
 }
